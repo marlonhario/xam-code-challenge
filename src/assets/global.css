@@ -1,0 +1,25 @@
+:root {
+	--light-grey: #dddddd;
+	--grey: #808080;
+	--blue: #31ade2;
+	--red: #ff0000;
+	--light-red: #fcb8b8;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+button {
+	border: none;
+	padding: 11px;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+form input {
+	margin-bottom: 15px;
+	padding: 5px 10px;
+}
