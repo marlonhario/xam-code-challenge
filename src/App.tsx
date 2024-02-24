@@ -9,9 +9,7 @@ import { Login } from "./pages/login/Login";
 import { Dashboard } from "./pages/dashboard/Dashboard";
 import NotFound from "./pages/not-found/NotFound";
 import { usersLoader } from "./hooks/dashboard";
-import { useEffect, useState } from "react";
-import { Context } from "./context/context";
-
+import AuthProvider from "./context/AuthProvider";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -24,16 +22,10 @@ const router = createBrowserRouter(
 );
 
 function App() {
-	const [user, setUser] = useState<string>("");
-	useEffect(() => {
-		const authUser = sessionStorage.getItem("username");
-		setUser(authUser ? authUser : "");
-	}, []);
-
 	return (
-		<Context.Provider value={{ user, setUser }}>
+		<AuthProvider>
 			<RouterProvider router={router} />
-		</Context.Provider>
+		</AuthProvider>
 	);
 }
 

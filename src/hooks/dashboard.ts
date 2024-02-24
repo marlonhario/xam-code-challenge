@@ -3,7 +3,7 @@ import { FieldValues, UseFormReturn, useForm } from "react-hook-form";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { fieldName, headerLabel } from "../constant";
 import { createUser, deleteUser, getUsers } from "../api/user";
-import { useUserContext } from "../context/context";
+import { useUserContext } from "../context/AuthProvider";
 
 export const useDashboard = () => {
 	const users: any = useLoaderData();

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { fieldName } from "../constant";
 import { loginUser } from "../api/user";
-import { useUserContext } from "../context/context";
+import { useUserContext } from "../context/AuthProvider";
 
 export const useLogin = () => {
 	const [errorLogin, setErrorLogin] = useState("");
