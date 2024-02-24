@@ -35,7 +35,7 @@ export const Login = () => {
 				</button>
 			</form>
 			<p className={`login__form-error${errorLogin ? " true" : " false"}`}>
-				{errorLogin ? errorLogin : ""}
+				{errorLogin ? errorLogin : "Error"}
 			</p>
 		</div>
 	);
