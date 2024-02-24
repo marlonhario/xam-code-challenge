@@ -1,5 +1,7 @@
 import { NavigateFunction } from "react-router-dom";
-import { serverAPI } from "../constant";
+
+// mock server (address suppose to be put at env in a real project)
+export const serverAPI = "http://localhost:4000";
 
 const header = { "content-type": "application/json" };
 

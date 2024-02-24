@@ -17,5 +17,3 @@ export const headerLabel = [
 	"Action",
 ];
 
-// mock server (address suppose to be put at env in a real project)
-export const serverAPI = "http://localhost:4000";
