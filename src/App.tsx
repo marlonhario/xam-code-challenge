@@ -9,12 +9,9 @@ import { Login } from "./pages/login/Login";
 import { Dashboard } from "./pages/dashboard/Dashboard";
 import NotFound from "./pages/not-found/NotFound";
 import { usersLoader } from "./hooks/dashboard";
-import { createContext, useEffect, useState } from "react";
-export type ContextType = {
-	user: string;
-	setUser: React.Dispatch<React.SetStateAction<string>>;
-};
-export const Context = createContext<any>(null);
+import { useEffect, useState } from "react";
+import { Context } from "./context/context";
+
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -27,10 +24,10 @@ const router = createBrowserRouter(
 );
 
 function App() {
-	const [user, setUser] = useState<string | null>("");
+	const [user, setUser] = useState<string>("");
 	useEffect(() => {
 		const authUser = sessionStorage.getItem("username");
-		setUser(authUser);
+		setUser(authUser ? authUser : "");
 	}, []);
 
 	return (

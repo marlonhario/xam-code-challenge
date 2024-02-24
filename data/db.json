@@ -1,16 +1,6 @@
 {
   "users": [
     {
-      "id": "b4a3",
-      "branchId": "123",
-      "userName": "sasddddd",
-      "firstName": "ddddddd",
-      "middleName": "ddddddddd",
-      "lastName": "dddddd",
-      "position": "dddddddd",
-      "password": "ddddddddd"
-    },
-    {
       "id": "7f2b",
       "branchId": "123",
       "userName": "admin",
@@ -19,6 +9,16 @@
       "lastName": "admin",
       "position": "admin",
       "password": "admin"
+    },
+    {
+      "id": "a8b8",
+      "branchId": "2323",
+      "userName": "asdd",
+      "firstName": "ddddddddddd",
+      "middleName": "ddddddddd",
+      "lastName": "ddddddddd",
+      "position": "ddddddddd",
+      "password": "ddddddddd"
     }
   ]
 }

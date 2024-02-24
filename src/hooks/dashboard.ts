@@ -1,15 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { FieldValues, UseFormReturn, useForm } from "react-hook-form";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { fieldName, headerLabel } from "../constant";
 import { createUser, deleteUser, getUsers } from "../api/user";
-import { Context } from "../App";
+import { useUserContext } from "../context/context";
 
 export const useDashboard = () => {
 	const users: any = useLoaderData();
 	const [errorAdd, setErrorAdd] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
-	const { user, setUser } = useContext(Context);
+	const { user, setUser } = useUserContext();
 	const navigate = useNavigate();
 	const methods: UseFormReturn<FieldValues, any, FieldValues> = useForm();
 

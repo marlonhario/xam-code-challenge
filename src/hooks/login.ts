@@ -1,13 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { fieldName } from "../constant";
 import { loginUser } from "../api/user";
-import { Context } from "../App";
+import { useUserContext } from "../context/context";
 
 export const useLogin = () => {
 	const [errorLogin, setErrorLogin] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
-	const { user, setUser } = useContext(Context);
+	const { user, setUser } = useUserContext();
 	const navigate = useNavigate();
 
 	const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
